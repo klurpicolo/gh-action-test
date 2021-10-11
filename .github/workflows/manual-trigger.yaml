@@ -2,6 +2,14 @@ name: Manual trigger
 
 on :
   workflow_dispatch:
+    inputs:
+      neededToPutIn:
+        description: this is required field
+        required: true
+      thisCanOmit:
+        description: this is an optional field
+        required: false
+        default: foo baa
 
 jobs:
   build_test:
